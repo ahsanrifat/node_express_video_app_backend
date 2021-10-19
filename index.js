@@ -8,6 +8,7 @@ const userRoutes = require("./routers/user_routes");
 const app = express();
 
 // ---------Middlewares------------
+app.use(express.json());
 app.use("/user", userRoutes);
 
 // ---------start listening to the server--------

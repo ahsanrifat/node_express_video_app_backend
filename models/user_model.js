@@ -3,6 +3,7 @@ const UserSchema = mongoose.Schema({
   email: {
     type: String,
     required: true,
+    unique: true,
   },
   password: {
     type: String,
@@ -19,7 +20,6 @@ const UserSchema = mongoose.Schema({
   },
   joiningDate: {
     type: Date,
-    required: true,
     default: Date.now,
   },
 });
